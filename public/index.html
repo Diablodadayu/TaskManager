@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Manager</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Task Manager</h1>
+        <form id="task-form">
+            <input type="text" id="task-title" placeholder="Task Title" required>
+            <input type="date" id="due-date" required>
+            <div id="priority">
+                <label for="priority-dropdown">Priority:</label>
+                <select id="priority-dropdown" required>
+                    <option value="Low">Low</option>
+                    <option value="Medium">Medium</option>
+                    <option value="High">High</option>
+                </select>
+            </div>
+            <input type="text" id="description" placeholder="Description" required>
+            <input type="text" id="assignee" placeholder="Assignee" required>
+            <button type="submit">Add Task</button>
+        </form>
+        <input type="search" id="search-input" placeholder="Search tasks">
+
+        <ul id="task-list"></ul>
+        <div id="edit-modal" class="modal">
+            <div class="modal-content">
+                <span class="close" id="close-modal">&times;</span>
+                <form id="edit-form">
+                    <input type="text" id="edit-title" placeholder="Task Title" required>
+                    <input type="date" id="edit-due-date" required>
+                    <div class="edit_dropdown">
+                        <label for="edit-priority-dropdown">Priority:</label>
+                        <select id="edit-priority-dropdown" required>
+                            <option value="Low">Low</option>
+                            <option value="Medium">Medium</option>
+                            <option value="High">High</option>
+                        </select>
+                    </div>
+                    <input type="text" id="edit-description" placeholder="Description" required>
+                    <input type="text" id="edit-assignee" placeholder="Assignee" required>
+                    <button type="button" id="save-edit">Update</button>
+                    <button type="button" id="cancel-edit">Cancel</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
